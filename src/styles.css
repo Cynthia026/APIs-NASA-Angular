@@ -1,0 +1,31 @@
+/* A simple, clean dark UI (no extra UI libraries). */
+:root{
+  --bg0: #070A12;
+  --bg1: #0B1220;
+  --card: rgba(255,255,255,.06);
+  --card2: rgba(255,255,255,.10);
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.68);
+  --line: rgba(255,255,255,.12);
+  --good: #42f58d;
+  --warn: #f5d142;
+  --bad:  #ff5571;
+  --chip: rgba(255,255,255,.09);
+  --shadow: 0 12px 30px rgba(0,0,0,.45);
+}
+
+*{ box-sizing: border-box; }
+html, body{ height: 100%; }
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(900px 600px at 10% 10%, rgba(85,96,255,.20), transparent 55%),
+    radial-gradient(800px 520px at 90% 30%, rgba(0,255,174,.16), transparent 60%),
+    radial-gradient(900px 650px at 50% 100%, rgba(255,85,113,.12), transparent 55%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+}
+
+a{ color: inherit; }
+button, input{ font: inherit; }
