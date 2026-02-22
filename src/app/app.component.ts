@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RickMortyService } from './services/rick-morty.service';
+import { NasaService } from './services/nasa.service';
 import { Character } from './models/nasa.models';
 
 type LoadState = 'idle' | 'loading' | 'success' | 'error';

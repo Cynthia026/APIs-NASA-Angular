@@ -1,19 +1,26 @@
-export interface CharacterLocationRef {
-  name: string;
-  url: string;
+// Modelo Foto del dia (APOD)
+
+
+// Modelo Clima en Marte 
+
+
+// Modelo Asteriores (NEO)
+
+
+// Modelo Eventos Naturales (EONET)
+
+
+// Modelo Buscador de Imagene
+export interface NasaSearchResponse {
+  collection: {
+    items: {
+      data: { title: string; description?: string; media_type: string }[];
+      links?: { href: string }[];
+    }[];
+  };
 }
 
-export interface Character {
-  id: number;
-  name: string;
-  status: 'Alive' | 'Dead' | 'unknown' | string;
-  species: string;
-  type: string;
-  gender: string;
-  origin: CharacterLocationRef;
-  location: CharacterLocationRef;
-  image: string;
-  episode: string[];
-  url: string;
-  created: string;
+// Modelo Clima Solar
+export interface DonkiResponse {
+  flrID: string; beginTime: string; peakTime: string; classType: string;
 }
