@@ -15,11 +15,20 @@ export class NasaService {
 
   constructor(private http: HttpClient) {}
 
-  // 1. APOD
-  
-
+  // 1. APOD// endpointnadia
+  getApod(): Observable<ApodResponse> {
+  const params = new HttpParams().set('api_key', this.apiKey);
+  return this.http.get<ApodResponse>(`${this.baseUrl}/planetary/apod`, { params });
+}
   // 2. INSIGHT MARS WEATHER (Reemplaza Tech)
-  
+  getMarsWeather(): Observable<InsightWeatherResponse> {
+  const params = new HttpParams()
+    .set('api_key', this.apiKey)
+    .set('feedtype', 'json')
+    .set('ver', '1.0');
+
+  return this.http.get<InsightWeatherResponse>(`${this.baseUrl}/insight_weather/`, { params });
+}
 
   // 3. NEOWS (Asteroides)
   
