@@ -14,10 +14,24 @@ export interface InsightWeatherResponse {
 }
 
 // Modelo Asteriores (NEO)
-
+export interface NeoResponse {
+  element_count: number;
+  near_earth_objects: {
+    [key: string]: {
+      id: string; name: string; is_potentially_hazardous_asteroid: boolean;
+      estimated_diameter: { kilometers: { estimated_diameter_max: number }; };
+    }[];
+  };
+}
 
 // Modelo Eventos Naturales (EONET)
-
+export interface EonetResponse {
+  events: {
+    id: string; title: string;
+    categories: { title: string }[];
+    geometries: { date: string }[];
+  }[];
+}
 
 // Modelo Buscador de Imagene
 export interface NasaSearchResponse {
