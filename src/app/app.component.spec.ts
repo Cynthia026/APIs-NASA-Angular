@@ -8,7 +8,7 @@ import {
   EonetResponse, InsightWeatherResponse
 } from './models/nasa.models';
 
-type ViewModel = 'APOD' | 'WEATHER' | 'NEO' | 'EONET' | 'SEARCH' | 'DONKI';
+type ViewMode = 'APOD' | 'WEATHER' | 'NEO' | 'EONET' | 'SEARCH' | 'DONKI';
 type LoadState = 'idle' | 'loading' | 'success' | 'error';
 
 @Component({
