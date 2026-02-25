@@ -31,10 +31,18 @@ export class NasaService {
 }
 
   // 3. NEOWS (Asteroides)
-  
+  getAsteroids(): Observable<NeoResponse> {
+    const today = new Date().toISOString().split('T')[0];
+    const params = new HttpParams().set('api_key', this.apiKey).set('start_date', today).set('end_date', today);
+    return this.http.get<NeoResponse>(`${this.baseUrl}/neo/rest/v1/feed`, { params });
+  }
 
   // 4. EONET (Eventos Naturales)
-  
+  getEonetEvents(): Observable<EonetResponse> {
+    const params = new HttpParams().set('status', 'open').set('limit', '10');
+    return this.http.get<EonetResponse>(`https://eonet.gsfc.nasa.gov/api/v3/events`, { params });
+  }
+
 
   // 5. SEARCH (Buscador)
   search(query: string): Observable<NasaSearchResponse> {
