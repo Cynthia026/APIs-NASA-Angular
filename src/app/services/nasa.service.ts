@@ -3,7 +3,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { 
   ApodResponse, NeoResponse, NasaSearchResponse, DonkiResponse,
-  EonetResponse, InsightWeatherResponse // <--- Importamos la nueva interfaz
+  EonetResponse, InsightWeatherResponse 
 } from '../models/nasa.models';
 
 @Injectable({ providedIn: 'root' })
